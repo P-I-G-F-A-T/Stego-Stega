@@ -1,0 +1,19 @@
+1) This code can be optimized with numpy.
+By using numpy and a slightly different algorithm, this can be made to work with png and jpeg images.
+(It could work with any image file so long as numpy can read/write the matrix representations.)
+Since Numpy's matrix operations are optimized for speed this will also make the process much faster.
+
+2) The sequence of file creations can be improved.
+It's messy, consumes space, and has an awkward naming.
+
+3) If the text encoding (ASCII, Unicode, etc) is specified, then it could be written to work different texts.
+
+4) As far as stego goes, this is easy to crack.
+There are many steganalysis algorithms out there that can easily defeat this.
+So this algorithm might work in some cases, but the method of concealment has huge room for improvement.
+
+5) The program does not encrypt the message at all.
+A user can encrypt the message before hand by using other programs, but there's no built-in specification.
+This goes outside of stego, so not sure if it should be added or not.
+
+6) Most importantly: The documentation in the code is pretty sloppy and can possibly be streamlined into smaller files.
