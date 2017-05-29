@@ -1,0 +1,21 @@
+# Text-Encoder (Alpha) Instructions
+
+Text-Encoder works like this:
+It all depends on Python's PIL
+
+Using EvenOut.py it takes in an RGBA png and changes each pixel dimension to an even number (subtracts the parity).
+This will create a new image file so that the original is unchanged.
+
+Then it uses BitIn.py (which depends on TextToBytes2.py):
+It will ask for a string of a ascii-valued text.
+It will also ask for the even'd out image.
+It writes the message into the even'd out image by adding in the byte representation into the pixel dimensions.
+(So if the message is larger than the image's width*height*4, then there will likely be an error.)
+This will create a new image file as well.
+==> This is the Stegangraphic Image
+
+To decode the Steganographic Image, use GetBytes.py on the Stego'd Image.
+This will go through and read each pixel's values as a string of bytes and create a .txt file.
+
+Then use unStego.py to read the .txt file
+This will print the hidden message.
